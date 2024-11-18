@@ -1,0 +1,43 @@
+# Function to calculate speed (Speed = Distance / Time)
+def calculate_speed():
+    print("calculating speed")
+    distance = float(input("what is the distance: "))  # User input for distance
+    time = float(input("what is the distance: "))  # User input for time
+
+    speed = distance / time  # Basic calculation for speed
+    print("what is your speed")
+
+
+# Function to calculate force (Force = Mass * Acceleration)
+def calculate_force():
+    print("calculating force")
+    mass = float(input("what is the mass: "))  # User input for mass
+    acceleration = float(input("what is the accelaration: "))  # User input for acceleration
+
+    force = mass * acceleration
+    print("what is the force in newton")
+
+
+# Main function to run the program
+def physics_calculator():
+    print("")
+
+    while True:
+        print("how do you want to caculate")
+        print("1. Speed (Distance / Time)")
+        print("2. Force (Mass * Acceleration)")
+
+        choice = input("Enter the number of your choice (1, 2, or 3): ")  # User choice
+
+        if choice == '1':
+            calculate_speed()  # Call the speed calculation function
+        elif choice == '2':
+            calculate_force()  # Call the force calculation function
+        elif choice == '3':
+            print("")
+            break  # Exit the program
+
+
+# Run the program
+if __name__ == "__main__":
+    physics_calculator()
